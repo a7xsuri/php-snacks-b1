@@ -21,7 +21,17 @@ $BasketballMatch = [
         'punti ospite' => '119',
     ],
 
-]
+];
+
+$email = $_GET['email'];
+$nome = $_GET['name'];
+$age = $_GET['age'];
+
+if (strpos($email, '.') !== false && strpos($email, '@') !== false && strlen($nome) > 3 && is_int($age)){
+    $success = 'accesso effettuato';
+} else {
+    $error = 'accesso negato';
+}
 
 ?>
 
@@ -42,6 +52,9 @@ $BasketballMatch = [
             } ?>
     </div>
     <hr>
-    
+    <div class="accesso">
+        <?php echo $success; ?>
+        <?php echo $error; ?>
+    </div>
 </body>
 </html>
