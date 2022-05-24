@@ -33,6 +33,8 @@ if (strpos($email, '.') !== false && strpos($email, '@') !== false && strlen($no
     $error = 'accesso negato';
 }
 
+
+
 ?>
 
 
